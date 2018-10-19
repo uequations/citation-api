@@ -1,0 +1,54 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# ueq-citation-with-references-api
+
+The references API allows a user to create a record for a citation with the
+full list of references in a data store.
+
+## References Collection [/references]
+
+### Submit a citation with references to a data store [POST]
+
+You may submit a citation with refrences using this action. It takes a JSON
+object with various fields.
+
++ Request (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "choices": [
+                "Swift",
+                "Python",
+                "Objective-C",
+                "Ruby"
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
+
+    + Body
+
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 0
+                    }, {
+                        "choice": "Python",
+                        "votes": 0
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 0
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 0
+                    }
+                ]
+            }
