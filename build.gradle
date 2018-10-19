@@ -23,8 +23,8 @@ repositories {
 	mavenCentral()
 }
 
-
 dependencies {
+	compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.2'
 	implementation('org.springframework.boot:spring-boot-starter-jersey')
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
